@@ -1,17 +1,14 @@
 import React from "react";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import "./App.css";
 
-const client = new ApolloClient({
-  uri: "http:// localhost:4000/graphql",
-  cache: new InMemoryCache(),
-});
+import "./App.css";
+import { UserInputs } from "./components/UserInputs";
 
 function App() {
+  console.log("App rendered!");
   return (
-    <ApolloProvider client={client}>
-      <div className="App"></div>
-    </ApolloProvider>
+    <div className="App">
+      <UserInputs />
+    </div>
   );
 }
 
